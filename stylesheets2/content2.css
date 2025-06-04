@@ -291,24 +291,226 @@ margin-left: 1vw;
     }
 
 
+    .wrapper {
+      position: relative;
+      width: 100vw;
+      overflow: hidden;
+    }
+
+    /* 1) The top text: position it relative (or absolute) so z-index works */
+    .text-top1 {
+      position: absolute;
+      z-index: 10;           /* sits above the image row */
+      display: flex;
+      color: #fdfdfd;
+      font-family: "gilroy", sans-serif;
+      font-size: 2vw;
+      margin-top: 6VW;         /* give it a little breathing room from the top */
+      padding-left: 1vw;
+  }
+          /* First word → 20vw to next */
+    .text-top1 span:nth-child(1) {
+      margin-right: 24vw;
+    }
+    /* Second word → 30vw to next */
+    .text-top1 span:nth-child(2) {
+      margin-right: 28vw;
+    }
+    /* Third word → no extra margin */
+    .text-top1 span:nth-child(3) {
+      margin-right: 0;
+    }
+
+     .text-bottom1 {
+      position: absolute;
+      z-index: 10;           /* sits above the image row */
+      display: flex;
+      color: #fdfdfd;
+      font-family: "gilroy", sans-serif;
+      font-size: 2vw;
+      margin-top: 34VW;         /* give it a little breathing room from the top */
+      padding-left: 1vw;
+  }
+          /* First word → 20vw to next */
+    .text-bottom1 span:nth-child(1) {
+      margin-right: 30vw;
+    }
+    /* Second word → 30vw to next */
+    .text-bottom1 span:nth-child(2) {
+      margin-right: 32vw;
+    }
+    /* Third word → no extra margin */
+    .text-bottom1 span:nth-child(3) {
+      margin-right: 0;
+    }
+    
+
+    /* 2) The row of images */
+    .img-row1 {
+      display: flex;
+      position: relative;
+      margin-top: 5vw;       /* push the images down a bit */
+      gap: 2vw;              /* 2vw between each image */
+      z-index: 0;            /* behind the text */
+    }
+    .img-row1 img {
+      width: 31.8vw;
+      height: 32vw;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+
+    .btn-row1 {
+
+      position: relative;
+      margin-top: -8vw;
+      margin-bottom:0vw;
+      margin-left: 24vw;
+        display: flex;
+        gap: 25.8vw;       /* 3 vw space between each button */
+      }
+      
+
+
+.img-mid {
+  display: flex;
+  justify-content: center;   /* center the image horizontally if needed */
+  margin-top: 2vw;
+}
+
+
+     .text-mid {
+       display: flex;
+      flex-direction: column;  /* stack children top→bottom */
+      position: absolute;
+      z-index: 10;           /* sits above the image row */
+      color: #fdfdfd;
+      font-family: "gilroy", sans-serif;
+      font-size: 2vw;
+      margin-top: -45VW;  
+            padding-left: 1vw;
+       /* give it a little breathing room from the top */
+    }
+    .text-mid span + span {
+      margin-top: 1vw;         /* gap between the two “jose” lines */
+    }
+.img-mid img {
+  width: 100vw;
+  height: 50vw;
+  object-fit: contain;      /* preserves the entire image within those bounds */
+  display: block;
+}          /* removes any inline spacing */
+
+    .btn2 {
+      position: relative;
+      margin-top: -11.5vw;
+      margin-left: 90.5vw;
+
+      }
+
+    /* 1) The top text: position it relative (or absolute) so z-index works */
+    .text-top2 {
+      position: absolute;
+      z-index: 10;           /* sits above the image row */
+      display: flex;
+      color: #fdfdfd;
+      font-family: "gilroy", sans-serif;
+      font-size: 2vw;
+      margin-top: 6VW;         /* give it a little breathing room from the top */
+      padding-left: 1vw;
+  }
+          /* First word → 20vw to next */
+    .text-top2 span:nth-child(1) {
+      margin-right: 26vw;
+    }
+    /* Second word → 30vw to next */
+    .text-top2 span:nth-child(2) {
+      margin-right: 27vw;
+    }
+    /* Third word → no extra margin */
+    .text-top2 span:nth-child(3) {
+      margin-right: 0;
+    }
+
+     .text-bottom2 {
+      position: absolute;
+      z-index: 10;           /* sits above the image row */
+      display: flex;
+      color: #fdfdfd;
+      font-family: "gilroy", sans-serif;
+      font-size: 2vw;
+      margin-top: 34VW;         /* give it a little breathing room from the top */
+      padding-left: 1vw;
+  }
+          /* First word → 20vw to next */
+    .text-bottom2 span:nth-child(1) {
+      margin-right: 30vw;
+    }
+    /* Second word → 30vw to next */
+    .text-bottom2 span:nth-child(2) {
+      margin-right: 32vw;
+    }
+    /* Third word → no extra margin */
+    .text-bottom2 span:nth-child(3) {
+      margin-right: 0;
+    }
+    
+
+    /* 2) The row of images */
+    .img-row2 {
+      display: flex;
+      position: relative;
+      margin-top: 5vw;       /* push the images down a bit */
+      gap: 2vw;              /* 2vw between each image */
+      z-index: 0;            /* behind the text */
+    }
+    .img-row2 img {
+      width: 31.8vw;
+      height: 32vw;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+
+
+    .btn-row2 {
+      position: relative;
+      margin-top: -8vw;
+      margin-left: 24vw;
+        display: flex;
+        gap: 25.8vw;       /* 3 vw space between each button */
+      }
+          
+    .plus-btn {
+    display: inline-block;   /* allow padding & margin */
+    background: #CCED22;
+    margin-left: 0vw;
+    color: #000;             /* ensure link text is visible */
+    text-decoration: none;   /* remove underline */
+    border: none;
+        border-radius: 2vw;        /* slightly rounded corners */
+            width: 8vw;
+        height: 8vw;
+    font-size: 8vw;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+  }
+  .plus-btn {
+    background: #CCED22;
+  }
 
 
 
 
 
 
-
-
-
-
-
-
-        
    .nav-line2 {
      display: flex;
       align-items: center;
       position: relative;
-      margin-top: 20vw;
+      margin-top: 10vw;
       margin-left: 2vw;
       padding: 1vw;
       background: #000; /* пример фона */

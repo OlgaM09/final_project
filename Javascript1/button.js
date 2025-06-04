@@ -1,7 +1,7 @@
 
 window.addEventListener("DOMContentLoaded", () => {
 
-  const buttons = document.querySelectorAll(".btn1, .action-btn2, .action-btn3 ,.action-submit");
+  const buttons = document.querySelectorAll(".btn1, .action-btn2, .action-btn3 ,.action-submit,.plus-btn");
   const hoverColor    = "#A3C201";
 
   buttons.forEach(btn => {
