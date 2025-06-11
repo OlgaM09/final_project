@@ -19,8 +19,8 @@
           bigImg.src = img.src;
 
           // 5) Force it to be exactly twice as large (in pixels)
-          bigImg.style.width = (origW * 2) + "px";
-          bigImg.style.height = (origH * 2) + "px";
+          bigImg.style.width = (origW * 0.1) + "vw";
+          bigImg.style.height = (origH * 0.1) + "vw";
 
           // 6) Clear out any prior content, then append this enlarged image
           overlay.innerHTML = "";

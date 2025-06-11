@@ -1,0 +1,482 @@
+body {
+  background-color: #000;
+  overflow-x: hidden;
+
+}
+
+.main {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 0.1vw;
+  width: 0.1vw;
+  background-color: #fff;
+  border-radius: 50%;
+
+  box-shadow:
+    -42vw -4vh 0vw 0vw #fff,
+    25vw -41vh 0vw 0vw #fff,
+    -20vw 49vh 0vw 0.1VW #fff,
+    5vw 40vh 0.1VW 0.1VW #fff,
+    29vw 19vh 0.1VW 0vw #fff,
+    -44vw -13vh 0vw 0vw #fff,
+    46vw 41vh 0vw 0.1VW #fff,
+    -3vw -45vh 0vw 0.1VW #fff,
+    47vw 35vh 0.1VW 0vw #fff,
+    12vw -8vh 0.1VW 0vw #fff,
+    -34vw 48vh 0.1VW 0.1VW #fff,
+    32vw 26vh 0.1VW 0.1VW #fff,
+    32vw -41vh 0.1VW 0.1VW #fff,
+    0vw 37vh 0.1VW 0.1VW #fff,
+    34vw -26vh 0.1VW 0vw #fff,
+    -14vw -49vh 0.1VW 0vw #fff,
+    -12vw 45vh 0vw 0.1VW #fff,
+    -44vw -33vh 0vw 0.1VW #fff,
+    -13vw 41vh 0vw 0vw #fff,
+    -36vw -11vh 0vw 0.1VW #fff,
+    -23vw -24vh 0.1VW 0vw #fff,
+    -38vw -27vh 0vw 0.1VW #fff,
+    16vw -19vh 0vw 0vw #fff,
+    28vw 33vh 0.1VW 0vw #fff,
+    -49vw -4vh 0vw 0vw #fff,
+    16vw 32vh 0vw 0.1VW #fff,
+    36vw -18vh 0.1VW 0vw #fff,
+    -25vw -30vh 0.1VW 0vw #fff,
+    -23vw 24vh 0vw 0.1VW #fff,
+    -2vw -35vh 0.1VW 0.1VW #fff,
+    -25vw 9vh 0vw 0vw #fff,
+    -15vw -34vh 0vw 0vw #fff,
+    -8vw -19vh 0.1VW 0vw #fff,
+    -20vw -20vh 0.1VW 0.1VW #fff,
+    42vw 50vh 0vw 0.1VW #fff,
+    -32vw 10vh 0.1VW 0vw #fff,
+    -23vw -17vh 0vw 0vw #fff,
+    44vw 15vh 0.1VW 0vw #fff,
+    -40vw 33vh 0.1VW 0.1VW #fff,
+    -43vw 8vh 0vw 0vw #fff,
+    -48vw -15vh 0.1VW 0.1VW #fff,
+    -24vw 17vh 0vw 0vw #fff,
+    -31vw 50vh 0.1VW 0vw #fff,
+    36vw -38vh 0vw 0.1VW #fff,
+    -7vw 48vh 0vw 0vw #fff,
+    15vw -32vh 0vw 0vw #fff,
+    29vw -41vh 0vw 0vw #fff,
+    2vw 37vh 0.1VW 0vw #fff,
+    7vw -40vh 0.1VW 0.1VW #fff,
+    15vw 18vh 0vw 0vw #fff,
+    25vw -13vh 0.1VW 0.1VW #fff,
+    -46vw -12vh 0.1VW 0.1VW #fff,
+    -18vw 22vh 0vw 0vw #fff,
+    23vw -9vh 0.1VW 0vw #fff,
+    50vw 12vh 0vw 0.1VW #fff,
+    45vw 2vh 0vw 0vw #fff,
+    14vw -48vh 0.1VW 0vw #fff,
+    23vw 43vh 0vw 0.1VW #fff,
+    -40vw 16vh 0.1VW 0.1VW #fff,
+    20vw -31vh 0vw 0.1VW #fff,
+    -17vw 44vh 0.1VW 0.1VW #fff,
+    18vw -45vh 0vw 0vw #fff,
+    33vw -6vh 0vw 0vw #fff,
+    0vw 7vh 0vw 0.1VW #fff,
+    -10vw -18vh 0vw 0.1VW #fff,
+    -19vw 5vh 0.1VW 0vw #fff,
+    1vw 42vh 0vw 0vw #fff,
+    22vw 48vh 0vw 0.1VW #fff,
+    39vw -8vh 0.1VW 0.1VW #fff,
+    -6vw -42vh 0.1VW 0vw #fff,
+    -47vw 34vh 0vw 0vw #fff,
+    -46vw 19vh 0vw 0.1VW #fff,
+    -12vw -32vh 0vw 0vw #fff,
+    -45vw -38vh 0vw 0.1VW #fff,
+    -28vw 18vh 0.1VW 0vw #fff,
+    -38vw -46vh 0.1VW 0.1VW #fff,
+    49vw -6vh 0.1VW 0.1VW #fff,
+    -28vw 18vh 0.1VW 0.1VW #fff,
+    10vw -24vh 0vw 0.1VW #fff,
+    -5vw -11vh 0.1VW 0.1VW #fff,
+    33vw -8vh 0.1VW 0vw #fff,
+    -16vw 17vh 0vw 0vw #fff,
+    18vw 27vh 0vw 0.1VW #fff,
+    -8vw -10vh 0.1VW 0.1VW #fff;
+
+  /* stars layer also updated */
+  box-shadow:
+    24vw 9vh 0.1VW 0vw #fff,
+    12vw -24vh 0vw 0.1VW #fff,
+    -45vw -22vh 0vw 0vw #fff,
+    -37vw -40vh 0vw 0.1VW #fff,
+    29vw 19vh 0vw 0.1VW #fff,
+    4vw -8vh 0vw 0.1VW #fff,
+    -5vw 21vh 0.1VW 0.1VW #fff,
+    -27vw 26vh 0.1VW 0.1VW #fff,
+    -47vw -3vh 0.1VW 0.1VW #fff,
+    -28vw -30vh 0vw 0.1VW #fff,
+    -43vw -27vh 0vw 0.1VW #fff,
+    4vw 22vh 0.1VW 0.1VW #fff,
+    36vw 23vh 0vw 0vw #fff,
+    -21vw 24vh 0.1VW 0.1VW #fff,
+    -16vw 2vh 0.1VW 0vw #fff,
+    -16vw -6vh 0vw 0vw #fff,
+    5vw 26vh 0vw 0vw #fff,
+    -34vw 41vh 0vw 0vw #fff,
+    1vw 42vh 0.1VW 0.1VW #fff,
+    11vw -13vh 0.1VW 0.1VW #fff,
+    48vw -8vh 0.1VW 0vw #fff,
+    22vw -15vh 0vw 0vw #fff,
+    45vw 49vh 0vw 0vw #fff,
+    43vw -27vh 0.1VW 0.1VW #fff,
+    20vw -2vh 0vw 0vw #fff,
+    8vw 22vh 0vw 0.1VW #fff,
+    39vw 48vh 0.1VW 0.1VW #fff,
+    -21vw -11vh 0vw 0.1VW #fff,
+    -40vw 45vh 0vw 0.1VW #fff,
+    11vw -30vh 0.1VW 0vw #fff,
+    26vw 30vh 0.1VW 0vw #fff,
+    45vw -29vh 0vw 0.1VW #fff,
+    -2vw 18vh 0vw 0vw #fff,
+    -29vw -45vh 0.1VW 0vw #fff,
+    -7vw -27vh 0.1VW 0.1VW #fff,
+    42vw 24vh 0vw 0vw #fff,
+    45vw -48vh 0.1VW 0vw #fff,
+    -36vw -18vh 0vw 0vw #fff,
+    -44vw 13vh 0vw 0.1VW #fff,
+    36vw 16vh 0vw 0.1VW #fff,
+    40vw 24vh 0vw 0vw #fff,
+    18vw 11vh 0vw 0vw #fff,
+    -15vw -23vh 0.1VW 0vw #fff,
+    -24vw 48vh 0vw 0.1VW #fff,
+    27vw -45vh 0.1VW 0vw #fff,
+    -2vw -24vh 0vw 0.1VW #fff,
+    -15vw -28vh 0vw 0vw #fff,
+    -43vw 13vh 0.1VW 0vw #fff,
+    7vw 27vh 0.1VW 0vw #fff,
+    47vw 5vh 0vw 0vw #fff,
+    -45vw 15vh 0.1VW 0.1VW #fff,
+    -5vw -28vh 0vw 0.1VW #fff,
+    38vw 25vh 0.1VW 0.1VW #fff,
+    -39vw -1vh 0.1VW 0vw #fff,
+    5vw 0vh 0.1VW 0vw #fff,
+    49vw 13vh 0vw 0vw #fff,
+    48vw 10vh 0vw 0.1VW #fff,
+    19vw -28vh 0vw 0vw #fff,
+    4vw 7vh 0vw 0vw #fff,
+    21vw 21vh 0.1VW 0.1VW #fff,
+    -15vw -15vh 0vw 0.1VW #fff,
+    -6vw -42vh 0.1VW 0vw #fff,
+    -15vw 48vh 0.1VW 0.1VW #fff,
+    -23vw 25vh 0.1VW 0.1VW #fff,
+    -48vw 25vh 0vw 0.1VW #fff,
+    -31vw -19vh 0vw 0.1VW #fff,
+    4vw 37vh 0.1VW 0.1VW #fff,
+    -43vw 28vh 0vw 0vw #fff,
+    3vw -25vh 0vw 0.1VW #fff,
+    -39vw 14vh 0vw 0.1VW #fff,
+    -40vw 31vh 0vw 0.1VW #fff,
+    35vw -36vh 0.1VW 0.1VW #fff,
+    16vw 49vh 0vw 0vw #fff,
+    6vw 39vh 0vw 0vw #fff,
+    3vw -35vh 0vw 0.1VW #fff,
+    -44vw -2vh 0.1VW 0vw #fff,
+    -6vw 21vh 0.1VW 0vw #fff,
+    48vw 9vh 0.1VW 0.1VW #fff,
+    -43vw 30vh 0.1VW 0.1VW #fff,
+    29vw -12vh 0.1VW 0.1VW #fff,
+    -48vw 13vh 0.1VW 0vw #fff,
+    -42vw 32vh 0.1VW 0.1VW #fff,
+    34vw 15vh 0.1VW 0.1VW #fff,
+    29vw -37vh 0.1VW 0.1VW #fff,
+    28vw 2vh 0vw 0vw #fff;
+  animation: zoom 20s alternate infinite;
+  z-index: -10;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+#logo {
+
+  background-color: red;
+  flex-wrap: wrap;
+  max-width: 0vw;
+  position: relative;
+  margin-top: 0vw;
+  margin-left: 0vw;
+}
+
+#logo .logo-img {
+  width: 8vw;
+  margin-left: 2vw;
+  height: auto;
+  display: block;
+  /* removes any inline spacing/gap */
+}
+
+.header-line {
+  display: flex;
+  position: relative;
+  margin-top: 7vw;
+  margin-left: 25vw;
+  gap: 5vw;
+  /* расстояние между элементами */
+  color: #CCED22;
+  /* красный текст */
+  font-family: "gilroy";
+  white-space: nowrap;
+  /* не переносить на новую строку */
+  font-size: 1.5vw;
+  /* при желании можно изменить размер */
+}
+
+
+
+
+.text1 {
+  display: flex;
+  margin-top: 2vw;
+  gap: 0.5vw;
+  /* расстояние между фрагментами */
+  color: #fdfdfd;
+  /* цвет по умолчанию */
+  font-family: "Postertoaster", sans-serif;
+  font-size: 10.5vw;
+  white-space: nowrap;
+  /* чтобы всё шло в одну строку */
+}
+
+.text1 .line1,
+.text1 .line2 {
+  display: block;
+  /* каждая «линия» на своей строке */
+}
+
+.text1 .line1 {
+  margin-left: 30vw;
+}
+
+.text1 .line2 {
+  margin-top: -2vw;
+  margin-left: 10vw;
+}
+
+.yellow {
+  color: #CCED22;
+}
+
+.purple {
+  color: #C038F4;
+}
+
+
+.text2 {
+  display: flex;
+  margin-top: 1vw;
+  margin-left: 35vw;
+
+  gap: 0.5vw;
+  /* расстояние между фрагментами */
+  color: #fdfdfd;
+  /* цвет по умолчанию */
+  font-family: "gilroy", sans-serif;
+  font-size: 1.5vw;
+  white-space: nowrap;
+  /* чтобы всё шло в одну строку */
+}
+
+.text2 .line2-1,
+.text2 .line2-2 {
+  display: block;
+  /* каждая «линия» на своей строке */
+}
+
+.btn1 {
+  display: inline-block;
+  background-color: #CCED22;
+  /* bright yellow fill */
+  color: #000;
+  margin-top: 5VW;
+  margin-bottom: 10vw;
+  margin-left: 39VW;
+  /* black text */
+  border: none;
+  paddinG: 0.8VW 5VW 0.8vw 5VW;
+  /* no border, solid fill */
+  border-radius: 10vw;
+  /* pill‐shaped corners */
+  font-family: "gilroy", sans-serif;
+  font-size: 1.5VW;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10;
+
+}
+
+.btn1:hover {
+  background-color: #CCED22;
+}
+
+
+.gallery {
+  display: flex;
+  width: 50vw;
+  height: 50vw;
+  gap: 1vw;
+  /* gap between left & right halves */
+}
+
+/* Left half: one image */
+.gallery .left {
+  flex: 1;
+}
+
+.gallery .left img {
+  width: 52vw;
+  height: 52vw;
+  object-fit: cover;
+  display: block;
+}
+
+/* Right half: two rows */
+.gallery .right {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  /* gap between top & bottom */
+}
+
+/* Top of right: two stacked images */
+.gallery .right .top {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* stack vertically */
+  gap: 1vw;
+}
+
+.gallery .right .top img {
+  width: 50vw;
+  object-fit: cover;
+  height: 25.5vw;
+  /* let flex grow define height */
+  display: block;
+}
+
+/* Bottom of right: one full‐width image */
+.gallery .second {
+  flex: 1;
+}
+
+.gallery .second img {
+  width: 52vw;
+  height: 52vw;
+  object-fit: cover;
+  display: block;
+}
+
+/* Container for the two images */
+.extra-row {
+  display: flex;
+  position: relative;
+  gap: 1vw;
+  margin-top: 5vw;
+  /* space between the images */
+  width: 100vw;
+  height: 50vw;
+}
+
+/* Each image takes up half the width */
+.extra-row img {
+  flex: 1;
+  width: 0;
+  /* let flex define the width */
+  height: 50vw;
+  /* stretch to fill container height */
+  object-fit: cover;
+  /* cover the cell, cropping as needed */
+  display: block;
+  /* eliminate inline whitespace */
+}
+
+
+
+.nav-line {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 20vw;
+  margin-left: 2vw;
+  padding: 1vw;
+  background: #000;
+  /* пример фона */
+  color: #fff;
+  font-family: "gilroy", sans-serif;
+  font-size: 2vw;
+}
+
+/* 👉 Style all links: remove underline and inherit color */
+.nav-line a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 👉 2 vw gap after the first three links */
+.nav-line .us,
+.nav-line .merch,
+.nav-line .poster {
+  margin-right: 2vw;
+}
+
+/* 👉 10 vw gap between cart and the icon */
+.nav-line .buy {
+  margin-right: 10vw;
+}
+
+/* 👉 Size the location icon to exactly 1 vw × 1 vw */
+.nav-line .locationimage {
+  width: 2vw;
+  height: 2vw;
+  object-fit: contain;
+  margin-right: 2vw;
+  /* small gap before the footer text */
+}
+
+/* 👉 Footer text never wraps */
+.nav-line .footer {
+  white-space: nowrap;
+}
+
+
+
+.site-footer {
+  position: relative;
+  width: 200vw;
+  margin-left: -50VW;
+  margin-top: 1vw;
+}
+
+/* the thin dividing line */
+.site-footer hr {
+  border: none;
+  height: 0.05vw;
+  background: #fff;
+  /* white at 30% opacity */
+  margin: 2.5vw;
+}
+
+/* centered copyright text */
+.site-footer .copyright {
+  text-align: center;
+  color: #fff;
+  font-size: 0.9vw;
+  /* scale with viewport width */
+  margin-top: 0.5vw;
+  font-family: Arial, sans-serif;
+  /* or your Gilroy */
+}

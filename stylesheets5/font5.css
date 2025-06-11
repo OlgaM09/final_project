@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "gilroy";
+    src: url("../gilroy/Gilroy-Bold.ttf") format("opentype");
+    font-weight: 200;
+    font-style: normal; }
+
+ @font-face {
+    font-family: "gilroy";
+    src: url("../gilroy/Gilroy-SemiBold.ttf") format("opentype");
+    font-weight: 200;
+    font-style: normal; }
+    
+    @font-face {
+    font-family: "Postertoaster";
+    src: url("../Postertoaster/Postertoaster.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal; }
+
+ 
