@@ -287,8 +287,8 @@ margin-left:10vw;
 
      .text2 {
       display: flex;
-      margin-top: vw;
-      margin-left:35vw;
+      margin-top: 2vw;
+      margin-left:34vw;
 
       gap: 0.5vw;             
       color: #fdfdfd;         
@@ -296,11 +296,14 @@ margin-left:10vw;
       font-size: 1.5vw;
       white-space: nowrap;    
     }
-        .text2 .line2-1,
+    .text2 .line2-1,
     .text2 .line2-2 {
-      display: block;             
+      display: block; 
     }
+.text2 .line2-2 {
+margin-left: -3VW;}
 
+    
    .btn1 {
 display: inline-block;
       background-color: #CCED22;    
