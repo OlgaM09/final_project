@@ -1,6 +1,7 @@
 body{
     background-color: #000;
         overflow-x: hidden; 
+        cursor: none; 
 
 }
 
@@ -200,6 +201,38 @@ body{
     }
 }
 
+ #custom-cursor {
+      position: fixed;
+      top: 0; left: 0;
+      width: 1.5vw;
+      height: 1.5vw;
+      background:#CCED22;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 10000;
+    }
+
+
+    .trail {
+      position: fixed;
+      width: 1vw;
+      height: 1vw;
+      background:#CCED22;
+      border-radius: 50%;
+      pointer-events: none;
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+      animation: fadeOut 0.6s forwards;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(2);
+      }
+    }
+
 #logo{
 
     flex-wrap: wrap;
@@ -212,37 +245,38 @@ body{
   width: 8vw;
   margin-left: 2vw;
   height: auto;
-  display: block; /* removes any inline spacing/gap */
+  display: block; 
 }
 
 
-       .nav-line {
+    
+   .nav-line {
      display: flex;
       align-items: center;
       position: relative;
       margin-top: -4vw;
       margin-left:65vw;
       padding: 1vw;
-      background: #000; /* пример фона */
+      background: #000; 
       color: #fff;
       font-family: "gilroy" , sans-serif;
       font-size:1.5vw;
     }
 
-    /* 👉 Style all links: remove underline and inherit color */
+  
     .nav-line a {
       text-decoration: none;
       color: inherit;
     }
 
-    /* 👉 2 vw gap after the first three links */
+
     .nav-line .us,
     .nav-line .merch,
     .nav-line .poster {
       margin-right: 2vw;
     }
 
-    /* 👉 10 vw gap between cart and the icon */
+
     .nav-line .buy {
       margin-right:0vw;
     }
@@ -254,11 +288,11 @@ body{
       color: #fdfdfd;           
       font-family: "Postertoaster", sans-serif;
       font-size: 10.5vw;
-      white-space: nowrap;      /* чтобы всё шло в одну строку */
+      white-space: nowrap;     
     }
      .text1 .line1,
     .text1 .line2 {
-      display: block;             /* каждая «линия» на своей строке */
+      display: block;         
     }
     .text1 .line1 {
 margin-left:2vw;
@@ -275,104 +309,230 @@ margin-left: 1vw;
       display: flex;
       position: relative;
       margin-top: -8.5vw;
-      margin-left: 28vw;
+      margin-left: 22vw;
 
-      gap: 0.5vw;               /* расстояние между фрагментами */
-      color: #fdfdfd;           /* цвет по умолчанию */
+      gap: 0.5vw;             
+      color: #fdfdfd;          
       font-family: "gilroy", sans-serif;
       font-size: 2vw;
-      white-space: nowrap;      /* чтобы всё шло в одну строку */
+      white-space: nowrap;      
     }
         .text2 .line2-1,
     .text2 .line2-2, 
     .text2 .line2-3 {
-      display: block;             /* каждая «линия» на своей строке */
+      display: block;            
     }
-.text3 {
-      display: flex;
-      position: relative;
-      margin-top: 5vw;
-      margin-left:3vw;
 
-      gap: 0.5vw;               /* расстояние между фрагментами */
-      color: #fdfdfd;           /* цвет по умолчанию */
+
+    .wrapper {
+      position: relative;
+      width: 100vw;
+      overflow: hidden;
+    }
+
+
+    .text-top1 {
+      position: absolute;
+      z-index: 10;          
+      display: flex;
+      color: #fdfdfd;
       font-family: "gilroy", sans-serif;
       font-size: 2vw;
-      margin-bottom: 1VW;
-      white-space: nowrap;      /* чтобы всё шло в одну строку */
+      margin-top: 6VW;     
+      padding-left: 1vw;
+  }
+          
+    .text-top1 span:nth-child(1) {
+      margin-right: 24vw;
+    }
+  
+    .text-top1 span:nth-child(2) {
+      margin-right: 26.5vw;
+    }
+   
+    .text-top1 span:nth-child(3) {
+      margin-right: 0;
     }
 
-   /* ─── Grey box container for the 10 posters ─── */
-   .grey-box {
+     .text-bottom1 {
+      position: absolute;
+      z-index: 10;         
+      display: flex;
+      color: #fdfdfd;
+      font-family: "gilroy", sans-serif;
+      font-size: 2vw;
+      margin-top: 34VW;         
+      padding-left: 1vw;
+  }
+         
+    .text-bottom1 span:nth-child(1) {
+      margin-right: 30vw;
+    }
+    
+    .text-bottom1 span:nth-child(2) {
+      margin-right: 32vw;
+    }
+    
+    .text-bottom1 span:nth-child(3) {
+      margin-right: 0;
+    }
     
 
-  position: relative;         /* so the overlay can be absolutely positioned inside */
-  background-color: #ECECEC;  /* light grey */
-  padding: 2vw;
-  width: 100vw;               /* full viewport width */
-  margin: 0;                  /* no horizontal/vertical margins */
-  box-sizing: border-box;
-}
+    
+    .img-row1 {
+      display: flex;
+      position: relative;
+      margin-top: 5vw;       
+      gap: 2vw;            
+      z-index: 0;           
+    }
+    .img-row1 img {
+      width: 31.8vw;
+      height: 32vw;
+      object-fit: cover;
+      z-index: 0;
+    }
 
-/* ─── Grid: 2 rows × 5 columns ─── */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1vw;   /* 1vw between each poster */
-}
 
-/* ─── Each poster image ─── */
-.grid-container img.post-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  cursor: pointer;          
-  border: 0.2vw solid #ECECEC; /* optional border */
-  border-radius: 0.5vw;     /* optional rounding */
-}
+    .btn-row1 {
 
-/* ─── Overlay inside grey box, initially hidden ─── */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
+      position: relative;
+      margin-top: -8vw;
+      margin-bottom:0vw;
+      margin-left: 24vw;
+        display: flex;
+        gap: 25.8vw;      
+      }
+      
+
+
+.img-mid {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-  z-index: 10;
+  justify-content: center;   
+  margin-top: 0vw;
 }
-/* When we add “visible,” fade the overlay in */
-.overlay.visible {
-  visibility: visible;
-  opacity: 1;
-}
-/* The enlarged image inside the overlay */
-.overlay img {
-  box-shadow: 0 0 1vw rgba(0,0,0,0.5);
-  border-radius: 0.5vw;
-  object-fit: contain;  
-}
-.text4 {
-      display: flex;
-      position: relative;
-      margin-bottom: 1VW;
-      margin-top: 7vw;
-      margin-left:3vw;
 
-      gap: 0.5vw;               /* расстояние между фрагментами */
-      color: #fdfdfd;           /* цвет по умолчанию */
+
+     .text-mid {
+       display: flex;
+      flex-direction: column;  
+      position: absolute;
+      z-index: 10;          
+      color: #fdfdfd;
       font-family: "gilroy", sans-serif;
       font-size: 2vw;
-      white-space: nowrap;      /* чтобы всё шло в одну строку */
+      margin-top: -45VW;  
+            padding-left: 1vw;
+       
+    }
+    .text-mid span + span {
+      margin-top: 1vw;        
+    }
+.img-mid img {
+  width: 100vw;
+  height: 50vw;
+  object-fit: contain;     
+  display: block;
+}        
+
+    .btn2 {
+      position: relative;
+      margin-top: -11.5vw;
+      margin-left: 90.5vw;
+
+      }
+
+  
+    .text-top2 {
+      position: absolute;
+      z-index: 10;          
+      display: flex;
+      color: #fdfdfd;
+      font-family: "gilroy", sans-serif;
+      font-size: 2vw;
+      margin-top: 4VW;   
+      padding-left: 1vw;
+  }
+          
+    .text-top2 span:nth-child(1) {
+      margin-right: 26vw;
+    }
+  
+    .text-top2 span:nth-child(2) {
+      margin-right: 26.2vw;
+      }
+ 
+    .text-top2 span:nth-child(3) {
+      margin-right: 0;
     }
 
+     .text-bottom2 {
+      position: absolute;
+      z-index: 10;         
+      display: flex;
+      color: #fdfdfd;
+      font-family: "gilroy", sans-serif;
+      font-size: 2vw;
+      margin-top: 32VW;         
+      padding-left: 1vw;
+  }
+         
+    .text-bottom2 span:nth-child(1) {
+      margin-right: 30vw;
+    }
+  
+    .text-bottom2 span:nth-child(2) {
+      margin-right: 32vw;
+    }
+
+    .text-bottom2 span:nth-child(3) {
+      margin-right: 0;
+    }
     
+
+    .img-row2 {
+      display: flex;
+      position: relative;
+      margin-top: 3vw;       
+      gap: 2vw;           
+      z-index: 0;           
+    }
+    .img-row2 img {
+      width: 31.8vw;
+      height: 32vw;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+
+
+    .btn-row2 {
+      position: relative;
+      margin-top: -8vw;
+      margin-left: 24vw;
+        display: flex;
+        gap: 25.8vw;      
+      }
+          
+    .plus-btn {
+    display: inline-block;  
+    background: #CCED22;
+    margin-left: 0vw;
+    color: #000;             
+    text-decoration: none;   
+    border: none;
+        border-radius: 2vw;       
+            width: 8vw;
+        height: 8vw;
+    font-size: 8vw;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+  }
+  .plus-btn {
+    background: #CCED22;
+  }
+
 
 
 
@@ -384,40 +544,36 @@ margin-left: 1vw;
       margin-top: 10vw;
       margin-left: 2vw;
       padding: 1vw;
-      background: #000; /* пример фона */
+      background: #000; 
       color: #fff;
       font-family: "gilroy" , sans-serif;
       font-size:1.5vw;
     }
 
-    /* 👉 Style all links: remove underline and inherit color */
+   
     .nav-line2 a {
       text-decoration: none;
       color: inherit;
     }
 
-    /* 👉 2 vw gap after the first three links */
+  
     .nav-line2 .us2,
     .nav-line2 .merch2,
     .nav-line2 .poster2 {
       margin-right: 2vw;
     }
 
-    /* 👉 10 vw gap between cart and the icon */
+   
     .nav-line2 .buy2 {
       margin-right: 21vw;
     }
 
-    /* 👉 Size the location icon to exactly 1 vw × 1 vw */
     .nav-line2 .locationimage {
       width: 2vw;
       height: 2vw;
       object-fit: contain;
-      margin-right: 1vw; /* small gap before the footer text */
+      margin-right: 1vw; /
     }
-    
-
-    
 
   .site-footer {
   position: relative;
@@ -426,19 +582,19 @@ margin-left: 1vw;
   margin-top: 1vw;
 }
 
-/* the thin dividing line */
+
 .site-footer hr {
   border: none;
   height: 0.05vw;
-  background: #fff; /* white at 30% opacity */
+  background: #fff; 
   margin: 2.5vw;
 }
 
-/* centered copyright text */
+
 .site-footer .copyright {
   text-align: center;
   color: #fff;
-  font-size: 0.9vw;      /* scale with viewport width */
+  font-size: 0.9vw;      
   margin-top: 0.5vw;
-  font-family: Arial, sans-serif; /* or your Gilroy */
+  font-family: Arial, sans-serif; 
 }

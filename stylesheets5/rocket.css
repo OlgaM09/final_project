@@ -1,6 +1,8 @@
 body {
   background-color: #000;
   overflow-x: hidden;
+          cursor: none; 
+
 
 }
 
@@ -99,7 +101,7 @@ body {
     18vw 27vh 0vw 0.1VW #fff,
     -8vw -10vh 0.1VW 0.1VW #fff;
 
-  /* stars layer also updated */
+
   box-shadow:
     24vw 9vh 0.1VW 0vw #fff,
     12vw -24vh 0vw 0.1VW #fff,
@@ -200,9 +202,42 @@ body {
   }
 }
 
+
+ #custom-cursor {
+      position: fixed;
+      top: 0; left: 0;
+      width: 1.5vw;
+      height: 1.5vw;
+      background:#CCED22;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 10000;
+    }
+
+   
+    .trail {
+      position: fixed;
+      width: 1vw;
+      height: 1vw;
+      background:#CCED22;
+      border-radius: 50%;
+      pointer-events: none;
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+      animation: fadeOut 0.6s forwards;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(2);
+      }
+    }
+
+
 #logo {
 
-  background-color: red;
   flex-wrap: wrap;
   max-width: 0vw;
   position: relative;
@@ -215,7 +250,6 @@ body {
   margin-left: 2vw;
   height: auto;
   display: block;
-  /* removes any inline spacing/gap */
 }
 
        .nav-line {
@@ -225,26 +259,26 @@ body {
       margin-top: -4vw;
       margin-left:65vw;
       padding: 1vw;
-      background: #000; /* пример фона */
+      background: #000; 
       color: #fff;
       font-family: "gilroy";
       font-size:1.5vw;
     }
 
-    /* 👉 Style all links: remove underline and inherit color */
+  
     .nav-line a {
       text-decoration: none;
       color: inherit;
     }
 
-    /* 👉 2 vw gap after the first three links */
+    
     .nav-line .us,
     .nav-line .merch,
     .nav-line .poster {
       margin-right: 2vw;
     }
 
-    /* 👉 10 vw gap between cart and the icon */
+    
     .nav-line .buy {
       margin-right:0vw;
     }
@@ -257,14 +291,10 @@ body {
   margin-top: 7vw;
   margin-left: 25vw;
   gap: 5vw;
-  /* расстояние между элементами */
   color: #CCED22;
-  /* красный текст */
-  font-family: "gilroy";
+  font-family: "gilroy", sans-serif; 
   white-space: nowrap;
-  /* не переносить на новую строку */
   font-size: 1.5vw;
-  /* при желании можно изменить размер */
 }
 
 
@@ -272,19 +302,15 @@ body {
   display: flex;
   margin-top: 2vw;
   gap: 0.5vw;
-  /* расстояние между фрагментами */
   color: #fdfdfd;
-  /* цвет по умолчанию */
   font-family: "Postertoaster", sans-serif;
   font-size: 10.5vw;
   white-space: nowrap;
-  /* чтобы всё шло в одну строку */
 }
 
 .text1 .line1,
 .text1 .line2 {
   display: block;
-  /* каждая «линия» на своей строке */
 }
 
 .text1 .line1 {
@@ -311,19 +337,15 @@ body {
   margin-left: 35vw;
 
   gap: 0.5vw;
-  /* расстояние между фрагментами */
   color: #fdfdfd;
-  /* цвет по умолчанию */
   font-family: "gilroy", sans-serif;
   font-size: 1.5vw;
   white-space: nowrap;
-  /* чтобы всё шло в одну строку */
 }
 
 .text2 .line2-1,
 .text2 .line2-2 {
   display: block;
-  /* каждая «линия» на своей строке */
 }
 
 
@@ -332,14 +354,14 @@ margin-left: -3VW;}
 
    .btn1 {
 display: inline-block;
-      background-color: #CCED22;    /* bright yellow fill */
+      background-color: #CCED22; 
       color: #000; 
       margin-top: 5VW;
       margin-bottom: 10vw;
-      margin-left: 35VW;                  /* black text */
+      margin-left: 36VW;                  
       border: none;   
-      paddinG: 0.8VW  6VW 0.8vw 6VW;             /* no border, solid fill */
-      border-radius: 10vw;           /* pill‐shaped corners */
+      paddinG: 0.8VW  6VW 0.8vw 6VW;           
+      border-radius: 10vw;          
   font-family: "gilroy", sans-serif;
       font-size: 1.5VW;
       text-decoration: none;
@@ -360,10 +382,9 @@ display: inline-block;
   width: 50vw;
   height: 50vw;
   gap: 1vw;
-  /* gap between left & right halves */
 }
 
-/* Left half: one image */
+
 .gallery .left {
   flex: 1;
 }
@@ -375,20 +396,18 @@ display: inline-block;
   display: block;
 }
 
-/* Right half: two rows */
+
 .gallery .right {
   display: flex;
   flex-direction: column;
   gap: 1vw;
-  /* gap between top & bottom */
 }
 
-/* Top of right: two stacked images */
+
 .gallery .right .top {
   flex: 1;
   display: flex;
   flex-direction: column;
-  /* stack vertically */
   gap: 1vw;
 }
 
@@ -396,11 +415,10 @@ display: inline-block;
   width: 50vw;
   object-fit: cover;
   height: 25.5vw;
-  /* let flex grow define height */
   display: block;
 }
 
-/* Bottom of right: one full‐width image */
+
 .gallery .second {
   flex: 1;
 }
@@ -412,13 +430,13 @@ display: inline-block;
   display: block;
 }
 
-/* Container for the two images */
+
 .extra-row {
   display: flex;
   gap: 2vw;
 }
 
-/* common rules */
+
 .extra-row {
   display: flex;
   gap: 1.2vw;
@@ -430,21 +448,20 @@ display: inline-block;
   display: block;
 }
 
-/* per-image overrides: */
+
 .extra-cafe {
-  /* 1) give the container a yellow background and a set size */
   background-color: yellow;
   width: 63vw;
   height: 40vw;
-  overflow: hidden;     /* hide any part of the img that sticks out */
-  position: relative;   /* for good measure */
+  overflow: hidden;     
+  position: relative;   
 }
 
 .extra-merch {
   background-color: red;
   width: 54vw;
-  overflow: hidden;     /* hide any part of the img that sticks out */
-  position: relative;   /* for good measure */
+  overflow: hidden;     
+  position: relative;  
   height: 40vw;
 }
 
@@ -457,39 +474,36 @@ display: inline-block;
       margin-top: 7vw;
       margin-left: 2vw;
       padding: 1vw;
-      background: #000; /* пример фона */
+      background: #000; 
       color: #fff;
       font-family: "gilroy" , sans-serif;
       font-size:1.5vw;
     }
 
-    /* 👉 Style all links: remove underline and inherit color */
     .nav-line2 a {
       text-decoration: none;
       color: inherit;
     }
 
-    /* 👉 2 vw gap after the first three links */
     .nav-line2 .us2,
     .nav-line2 .merch2,
     .nav-line2 .poster2 {
       margin-right: 2vw;
     }
 
-    /* 👉 10 vw gap between cart and the icon */
+  
     .nav-line2 .buy2 {
       margin-right: 21vw;
     }
 
-    /* 👉 Size the location icon to exactly 1 vw × 1 vw */
     .nav-line2 .locationimage {
       width: 2vw;
       height: 2vw;
       object-fit: contain;
-      margin-right: 1vw; /* small gap before the footer text */
+      margin-right: 1vw; 
     }
 
-    /* 👉 Footer text never wraps */
+  
     .nav-line2 .footer {
       white-space: nowrap;
     }
@@ -503,22 +517,19 @@ display: inline-block;
   margin-top: 1vw;
 }
 
-/* the thin dividing line */
+
 .site-footer hr {
   border: none;
   height: 0.05vw;
   background: #fff;
-  /* white at 30% opacity */
   margin: 2.5vw;
 }
 
-/* centered copyright text */
+
 .site-footer .copyright {
   text-align: center;
   color: #fff;
   font-size: 0.9vw;
-  /* scale with viewport width */
   margin-top: 0.5vw;
   font-family: Arial, sans-serif;
-  /* or your Gilroy */
 }

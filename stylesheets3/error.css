@@ -1,6 +1,7 @@
 body{
     background-color: #000;
         overflow-x: hidden; 
+        cursor: none; 
 
 }
 
@@ -99,7 +100,7 @@ body{
      18vw  27vh 0vw 0.1VW #fff,
      -8vw -10vh 0.1VW 0.1VW #fff;
 
-  /* stars layer also updated */
+
   box-shadow:
     24vw   9vh 0.1VW 0vw #fff,
     12vw -24vh 0vw 0.1VW #fff,
@@ -199,32 +200,77 @@ body{
         transform: scale(1.5);
     }
 }
+
+
+@keyframes zoom {
+    0%{
+        transform: scale(1);
+    }
+ 
+    100%{
+        transform: scale(1.5);
+    }
+}
+
+ #custom-cursor {
+      position: fixed;
+      top: 0; left: 0;
+      width: 1.5vw;
+      height: 1.5vw;
+      background:#CCED22;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 10000;
+    }
+
+
+    .trail {
+      position: fixed;
+      width: 1vw;
+      height: 1vw;
+      background:#CCED22;
+      border-radius: 50%;
+      pointer-events: none;
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+      animation: fadeOut 0.6s forwards;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(2);
+      }
+    }
+
+
   .error-container {
       display: flex;
       gap: 0vw;     
           margin-top: 5VW;
-      margin-left:10vw;      /* exactly 2 vw between each digit */
+      margin-left:10vw;      
       align-items: center;
     }
 
-    /* 3) Base rule for all digits */
+   
     .error-container span {
       font-family: "Postertoaster", Arial, sans-serif;
-      font-size: 40vw;      /* each character fills roughly 20% of viewport width */
-      line-height: 1;       /* no extra line-height space */
-      position: relative;   /* allows z-index if needed */
+      font-size: 40vw;     
+      line-height: 1;       
+      position: relative;   
     }
 
-    /* 4) Style for the “4” digits */
+ 
     .digitfour {
-      color: #CCED22;       /* bright yellow green */
+      color: #CCED22;     
       z-index: 1;
     }
 
-    /* 5) Style for the “0” digit */
+  
     .digitzero {
-      color: #C038F4;       /* purple */
-      z-index: 2;           /* sits on top of the 4s if any overlap were used */
+      color: #C038F4;     
+      z-index: 2;           
     }
 
      .text3 {
@@ -233,28 +279,28 @@ body{
       margin-top: -20vw;
       margin-left: 60vw;
 
-      gap: 0.5vw;               /* расстояние между фрагментами */
-      color: #fdfdfd;           /* цвет по умолчанию */
+      gap: 0.5vw;             
+      color: #fdfdfd;          
       font-family: "gilroy", sans-serif;
       font-size: 2vw;
-      white-space: nowrap;      /* чтобы всё шло в одну строку */
+      white-space: nowrap;    
     }
         .text3 .line3-1,
     .text3 .line3-2, 
     .text3 .line3W-3 {
-      display: block;             /* каждая «линия» на своей строке */
+      display: block;            
     }
 
 .button3 {
   display: inline-block;
-  position: relative;   /* allow padding & margin */
+  position: relative;  
   margin-top: 2vw;
         margin-left: 60vw;
       font-family: "gilroy", sans-serif;
   padding: 1vw 3vw;
   background: #CCED22;
-  color: #000;             /* ensure link text is visible */
-  text-decoration: none;   /* remove underline */
+  color: #000;            
+  text-decoration: none;   
   border: none;
   border-radius: 5vw;
   font-size: 1vw;

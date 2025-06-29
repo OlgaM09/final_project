@@ -1,7 +1,7 @@
 body{
     background-color: #000;
-        overflow-x: hidden; 
-
+        overflow-x: hidden;
+        cursor: none; 
 }
 
 .main {
@@ -99,7 +99,7 @@ body{
      18vw  27vh 0vw 0.1VW #fff,
      -8vw -10vh 0.1VW 0.1VW #fff;
 
-  /* stars layer also updated */
+
   box-shadow:
     24vw   9vh 0.1VW 0vw #fff,
     12vw -24vh 0vw 0.1VW #fff,
@@ -199,9 +199,40 @@ body{
         transform: scale(1.5);
     }
 }
+ #custom-cursor {
+      position: fixed;
+      top: 0; left: 0;
+      width: 1.5vw;
+      height: 1.5vw;
+      background:#CCED22;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 10000;
+    }
+
+
+    .trail {
+      position: fixed;
+      width: 1vw;
+      height: 1vw;
+      background:#CCED22;
+      border-radius: 50%;
+      pointer-events: none;
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+      animation: fadeOut 0.6s forwards;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(2);
+      }
+    }
+
 #logo{
 
-    background-color: red;
     flex-wrap: wrap;
     max-width: 0vw; 
     position: relative;
@@ -212,7 +243,7 @@ body{
   width: 8vw;
   margin-left: 2vw;
   height: auto;
-  display: block; /* removes any inline spacing/gap */
+  display: block; 
 }
 
  .header-line {
@@ -220,11 +251,11 @@ body{
     position: relative;
       margin-top: 7vw;
      margin-left:25vw;
-      gap: 5vw;                 /* расстояние между элементами */
-      color: #CCED22;               /* красный текст */
+      gap: 5vw;                
+      color: #CCED22;              
         font-family: "gilroy";
-      white-space: nowrap;      /* не переносить на новую строку */
-      font-size: 1.5vw;        /* при желании можно изменить размер */
+      white-space: nowrap;     
+      font-size: 1.5vw;        
     }
 
 
@@ -233,15 +264,15 @@ body{
     .text1 {
       display: flex;
       margin-top: 2vw;
-      gap: 0.5vw;               /* расстояние между фрагментами */
-      color: #fdfdfd;           /* цвет по умолчанию */
+      gap: 0.5vw;              
+      color: #fdfdfd;           
       font-family: "Postertoaster", sans-serif;
       font-size: 10.5vw;
-      white-space: nowrap;      /* чтобы всё шло в одну строку */
+      white-space: nowrap;      
     }
      .text1 .line1,
     .text1 .line2 {
-      display: block;             /* каждая «линия» на своей строке */
+      display: block;           
     }
     .text1 .line1 {
 margin-left:30vw;
@@ -256,30 +287,30 @@ margin-left:10vw;
 
      .text2 {
       display: flex;
-      margin-top: 2vw;
+      margin-top: vw;
       margin-left:35vw;
 
-      gap: 0.5vw;               /* расстояние между фрагментами */
-      color: #fdfdfd;           /* цвет по умолчанию */
+      gap: 0.5vw;             
+      color: #fdfdfd;         
       font-family: "gilroy", sans-serif;
       font-size: 1.5vw;
-      white-space: nowrap;      /* чтобы всё шло в одну строку */
+      white-space: nowrap;    
     }
         .text2 .line2-1,
     .text2 .line2-2 {
-      display: block;             /* каждая «линия» на своей строке */
+      display: block;             
     }
 
    .btn1 {
 display: inline-block;
-      background-color: #CCED22;    /* bright yellow fill */
+      background-color: #CCED22;    
       color: #000; 
       margin-top: 5VW;
       margin-bottom: 10vw;
-      margin-left: 38VW;                  /* black text */
+      margin-left: 38VW;                
       border: none;   
-      paddinG: 0.8VW  6VW 0.8vw 6VW;             /* no border, solid fill */
-      border-radius: 10vw;           /* pill‐shaped corners */
+      paddinG: 0.8VW  6VW 0.8vw 6VW;         
+      border-radius: 10vw;           
   font-family: "gilroy", sans-serif;
       font-size: 1.5VW;
       text-decoration: none;
@@ -304,20 +335,32 @@ display: inline-block;
 
 .square {
   display: flex;
-  flex-direction: column;    /* stack children vertically */
-  justify-content: center;   /* center vertically */
-  align-items: center;       /* center horizontally */
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
   padding: 2vw;
-  
   box-sizing: border-box;
-  
   text-align: center;
   font-family: "gilroy", sans-serif;
-
   font-size: 2.5vw;
   line-height: 0.9;
   color: #000;
+  background: #ECECEC;
 }
+
+
+.square-content {
+  margin-top: 0vw;   
+}
+
+
+.square:nth-child(1) .square-content {
+  margin-top: 5vw;
+}
+.square:nth-child(3) .square-content {
+  margin-top: -3vw;
+}
+
 
 .square:nth-child(1) { background: #ECECEC; }
 .square:nth-child(1) { margin-top: vw; }
@@ -325,6 +368,7 @@ display: inline-block;
 .square:nth-child(2) { background: #0F19C6; color: #FFF; }
 .square:nth-child(3) { background: #C038F4; color: #FFF; }
 .square:nth-child(4) { background: #ECECEC; }
+
 
 
 .badge1 {
@@ -338,17 +382,17 @@ display: inline-block;
   font-size: 1vw;
   font-weight: 600;
   text-transform: uppercase;
-  display: inline-block;  /* ensure it sizes to content */
-  line-height: 1;         /* vertical centering of text */
+  display: inline-block;  
+  line-height: 1;         
 }
 
 .action-btn2 {
-  display: inline-block;   /* allow padding & margin */
+  display: inline-block;   
   margin-top: 2vw;
   padding: 1vw 4vw;
   background: #CCED22;
-  color: #000;             /* ensure link text is visible */
-  text-decoration: none;   /* remove underline */
+  color: #000;            
+  text-decoration: none;   
   border: none;
   border-radius: 5vw;
   font-size: 1vw;
@@ -371,17 +415,17 @@ display: inline-block;
   font-size: 1vw;
   font-weight: 600;
   text-transform: uppercase;
-  display: inline-block;  /* ensure it sizes to content */
-  line-height: 1;         /* vertical centering of text */
+  display: inline-block;  
+  line-height: 1;         
 }
 
 .action-btn3 {
-  display: inline-block;   /* allow padding & margin */
+  display: inline-block;   
   margin-top: 2vw;
   padding: 1vw 4vw;
   background: #CCED22;
-  color: #000;             /* ensure link text is visible */
-  text-decoration: none;   /* remove underline */
+  color: #000;             
+  text-decoration: none;  
   border: none;
   border-radius: 5vw;
   font-size: 1vw;
@@ -396,7 +440,7 @@ display: inline-block;
       .half-block {
       position: relative;
       margin-top: 5vw;
-      margin-left:3vw;           /* change to left:50vw; if you want the right half */
+      margin-left:3vw;           
       width: 60vw;
       height: 40vw;
       display: flex;
@@ -404,8 +448,8 @@ display: inline-block;
     }
     .half-block p {
       display: flex;
-      gap: 0vw;               /* расстояние между фрагментами */
-      color: #fdfdfd;           /* цвет по умолчанию */
+      gap: 0vw;              
+      color: #fdfdfd;        
       font-family: "Postertoaster", sans-serif;
       font-size: 8.5vw;
       white-space: nowrap;      
@@ -458,18 +502,18 @@ display: inline-block;
     }
     .half-right textarea {
       resize: none;
-      font-family: "gilroy", sans-serif;
+      font-family: "gilroy";
 
       height: 6vw;
     }
 
 .action-submit {
-  display: inline-block;   /* allow padding & margin */
+  display: inline-block;   
   margin-top: 2vw;
   padding: 1vw 4vw;
   background: #CCED22;
-  color: #000;             /* ensure link text is visible */
-  text-decoration: none;   /* remove underline */
+  color: #000;             
+  text-decoration: none;   
   border: none;
   border-radius: 5vw;
   font-size: 1vw;
@@ -491,39 +535,39 @@ display: inline-block;
       margin-top: 20vw;
       margin-left: 2vw;
       padding: 1vw;
-      background: #000; /* пример фона */
+      background: #000; 
       color: #fff;
       font-family: "gilroy" , sans-serif;
       font-size:1.5vw;
     }
 
-    /* 👉 Style all links: remove underline and inherit color */
+    
     .nav-line a {
       text-decoration: none;
       color: inherit;
     }
 
-    /* 👉 2 vw gap after the first three links */
+  
     .nav-line .us,
     .nav-line .merch,
     .nav-line .poster {
       margin-right: 2vw;
     }
 
-    /* 👉 10 vw gap between cart and the icon */
+ 
     .nav-line .buy {
       margin-right: 21vw;
     }
 
-    /* 👉 Size the location icon to exactly 1 vw × 1 vw */
+  
     .nav-line .locationimage {
       width: 2vw;
       height: 2vw;
       object-fit: contain;
-      margin-right: 1vw; /* small gap before the footer text */
+      margin-right: 1vw; 
     }
 
-    /* 👉 Footer text never wraps */
+ 
     .nav-line .footer {
       white-space: nowrap;
     }
@@ -537,19 +581,19 @@ display: inline-block;
   margin-top: 1vw;
 }
 
-/* the thin dividing line */
+
 .site-footer hr {
   border: none;
   height: 0.05vw;
-  background: #fff; /* white at 30% opacity */
+  background: #fff; 
   margin: 2.5vw;
 }
 
-/* centered copyright text */
+
 .site-footer .copyright {
   text-align: center;
   color: #fff;
-  font-size: 0.9vw;      /* scale with viewport width */
+  font-size: 0.9vw;     
   margin-top: 0.5vw;
-  font-family: Arial, sans-serif; /* or your Gilroy */
+  font-family: Arial, sans-serif; 
 }

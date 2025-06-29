@@ -1,6 +1,7 @@
 body{
     background-color: #000;
         overflow-x: hidden; 
+        cursor: none; 
 
 }
 
@@ -99,7 +100,7 @@ body{
      18vw  27vh 0vw 0.1VW #fff,
      -8vw -10vh 0.1VW 0.1VW #fff;
 
-  /* stars layer also updated */
+
   box-shadow:
     24vw   9vh 0.1VW 0vw #fff,
     12vw -24vh 0vw 0.1VW #fff,
@@ -200,6 +201,39 @@ body{
     }
 }
 
+ #custom-cursor {
+      position: fixed;
+      top: 0; left: 0;
+      width: 1.5vw;
+      height: 1.5vw;
+      background:#CCED22;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 10000;
+    }
+
+
+    .trail {
+      position: fixed;
+      width: 1vw;
+      height: 1vw;
+      background:#CCED22;
+      border-radius: 50%;
+      pointer-events: none;
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+      animation: fadeOut 0.6s forwards;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(2);
+      }
+    }
+
+
 #logo{
 
     flex-wrap: wrap;
@@ -212,38 +246,36 @@ body{
   width: 8vw;
   margin-left: 2vw;
   height: auto;
-  display: block; /* removes any inline spacing/gap */
+  display: block; 
 }
 
 
-    
-   .nav-line {
+       .nav-line {
      display: flex;
       align-items: center;
       position: relative;
       margin-top: -4vw;
       margin-left:65vw;
       padding: 1vw;
-      background: #000; /* пример фона */
+      background: #000; 
       color: #fff;
       font-family: "gilroy" , sans-serif;
       font-size:1.5vw;
     }
 
-    /* 👉 Style all links: remove underline and inherit color */
+
     .nav-line a {
       text-decoration: none;
       color: inherit;
     }
 
-    /* 👉 2 vw gap after the first three links */
+
     .nav-line .us,
     .nav-line .merch,
     .nav-line .poster {
       margin-right: 2vw;
     }
 
-    /* 👉 10 vw gap between cart and the icon */
     .nav-line .buy {
       margin-right:0vw;
     }
@@ -255,11 +287,11 @@ body{
       color: #fdfdfd;           
       font-family: "Postertoaster", sans-serif;
       font-size: 10.5vw;
-      white-space: nowrap;      /* чтобы всё шло в одну строку */
+      white-space: nowrap;      
     }
      .text1 .line1,
     .text1 .line2 {
-      display: block;             /* каждая «линия» на своей строке */
+      display: block;             
     }
     .text1 .line1 {
 margin-left:2vw;
@@ -276,233 +308,101 @@ margin-left: 1vw;
       display: flex;
       position: relative;
       margin-top: -8.5vw;
-      margin-left: 22vw;
+      margin-left: 28vw;
 
-      gap: 0.5vw;               /* расстояние между фрагментами */
-      color: #fdfdfd;           /* цвет по умолчанию */
+      gap: 0.5vw;             
+      color: #fdfdfd;         
       font-family: "gilroy", sans-serif;
       font-size: 2vw;
-      white-space: nowrap;      /* чтобы всё шло в одну строку */
+      white-space: nowrap;      
     }
         .text2 .line2-1,
     .text2 .line2-2, 
     .text2 .line2-3 {
-      display: block;             /* каждая «линия» на своей строке */
+      display: block;           
     }
-
-
-    .wrapper {
-      position: relative;
-      width: 100vw;
-      overflow: hidden;
-    }
-
-    /* 1) The top text: position it relative (or absolute) so z-index works */
-    .text-top1 {
-      position: absolute;
-      z-index: 10;           /* sits above the image row */
+.text3 {
       display: flex;
-      color: #fdfdfd;
+      position: relative;
+      margin-top: 5vw;
+      margin-left:3vw;
+
+      gap: 0.5vw;               
+      color: #fdfdfd;          
       font-family: "gilroy", sans-serif;
       font-size: 2vw;
-      margin-top: 6VW;         /* give it a little breathing room from the top */
-      padding-left: 1vw;
-  }
-          /* First word → 20vw to next */
-    .text-top1 span:nth-child(1) {
-      margin-right: 24vw;
-    }
-    /* Second word → 30vw to next */
-    .text-top1 span:nth-child(2) {
-      margin-right: 28vw;
-    }
-    /* Third word → no extra margin */
-    .text-top1 span:nth-child(3) {
-      margin-right: 0;
+      margin-bottom: 1VW;
+      white-space: nowrap;      
     }
 
-     .text-bottom1 {
-      position: absolute;
-      z-index: 10;           /* sits above the image row */
-      display: flex;
-      color: #fdfdfd;
-      font-family: "gilroy", sans-serif;
-      font-size: 2vw;
-      margin-top: 34VW;         /* give it a little breathing room from the top */
-      padding-left: 1vw;
-  }
-          /* First word → 20vw to next */
-    .text-bottom1 span:nth-child(1) {
-      margin-right: 30vw;
-    }
-    /* Second word → 30vw to next */
-    .text-bottom1 span:nth-child(2) {
-      margin-right: 32vw;
-    }
-    /* Third word → no extra margin */
-    .text-bottom1 span:nth-child(3) {
-      margin-right: 0;
-    }
-    
-
-    /* 2) The row of images */
-    .img-row1 {
-      display: flex;
-      position: relative;
-      margin-top: 5vw;       /* push the images down a bit */
-      gap: 2vw;              /* 2vw between each image */
-      z-index: 0;            /* behind the text */
-    }
-    .img-row1 img {
-      width: 31.8vw;
-      height: 32vw;
-      object-fit: cover;
-      z-index: 0;
-    }
-
-
-    .btn-row1 {
-
-      position: relative;
-      margin-top: -8vw;
-      margin-bottom:0vw;
-      margin-left: 24vw;
-        display: flex;
-        gap: 25.8vw;       /* 3 vw space between each button */
-      }
-      
-
-
-.img-mid {
-  display: flex;
-  justify-content: center;   /* center the image horizontally if needed */
-  margin-top: 0vw;
+   
+.grey-box {
+  position: relative;         
+  background-color: #ECECEC;  
+  padding: 2vw;
+  width: 100vw;              
+  margin: 0;                  
+  box-sizing: border-box;
 }
 
 
-     .text-mid {
-       display: flex;
-      flex-direction: column;  /* stack children top→bottom */
-      position: absolute;
-      z-index: 10;           /* sits above the image row */
-      color: #fdfdfd;
-      font-family: "gilroy", sans-serif;
-      font-size: 2vw;
-      margin-top: -45VW;  
-            padding-left: 1vw;
-       /* give it a little breathing room from the top */
-    }
-    .text-mid span + span {
-      margin-top: 1vw;         /* gap between the two “jose” lines */
-    }
-.img-mid img {
-  width: 100vw;
-  height: 50vw;
-  object-fit: contain;      /* preserves the entire image within those bounds */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1vw;   
+}
+
+
+.grid-container img.post-image {
+  width: 100%;
+  height: auto;
   display: block;
-}          /* removes any inline spacing */
+  cursor: pointer;          
+  border: 0.2vw solid #ECECEC; 
+  border-radius: 0.5vw;    
+}
 
-    .btn2 {
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 10;
+}
+
+.overlay.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlay img {
+  box-shadow: 0 0 1vw rgba(0,0,0,0.5);
+  border-radius: 0.5vw;
+  object-fit: contain;  
+}
+.text4 {
+      display: flex;
       position: relative;
-      margin-top: -11.5vw;
-      margin-left: 90.5vw;
+      margin-bottom: 1VW;
+      margin-top: 7vw;
+      margin-left:3vw;
 
-      }
-
-    /* 1) The top text: position it relative (or absolute) so z-index works */
-    .text-top2 {
-      position: absolute;
-      z-index: 10;           /* sits above the image row */
-      display: flex;
-      color: #fdfdfd;
+      gap: 0.5vw;             
+      color: #fdfdfd;         
       font-family: "gilroy", sans-serif;
       font-size: 2vw;
-      margin-top: 4VW;   
-            /* give it a little breathing room from the top */
-      padding-left: 1vw;
-  }
-          /* First word → 20vw to next */
-    .text-top2 span:nth-child(1) {
-      margin-right: 26vw;
-    }
-    /* Second word → 30vw to next */
-    .text-top2 span:nth-child(2) {
-      margin-right: 27vw;
-    }
-    /* Third word → no extra margin */
-    .text-top2 span:nth-child(3) {
-      margin-right: 0;
+      white-space: nowrap;     
     }
 
-     .text-bottom2 {
-      position: absolute;
-      z-index: 10;           /* sits above the image row */
-      display: flex;
-      color: #fdfdfd;
-      font-family: "gilroy", sans-serif;
-      font-size: 2vw;
-      margin-top: 32VW;         /* give it a little breathing room from the top */
-      padding-left: 1vw;
-  }
-          /* First word → 20vw to next */
-    .text-bottom2 span:nth-child(1) {
-      margin-right: 30vw;
-    }
-    /* Second word → 30vw to next */
-    .text-bottom2 span:nth-child(2) {
-      margin-right: 32vw;
-    }
-    /* Third word → no extra margin */
-    .text-bottom2 span:nth-child(3) {
-      margin-right: 0;
-    }
     
-
-    /* 2) The row of images */
-    .img-row2 {
-      display: flex;
-      position: relative;
-      margin-top: 3vw;       /* push the images down a bit */
-      gap: 2vw;              /* 2vw between each image */
-      z-index: 0;            /* behind the text */
-    }
-    .img-row2 img {
-      width: 31.8vw;
-      height: 32vw;
-      object-fit: cover;
-      z-index: 0;
-    }
-
-
-
-    .btn-row2 {
-      position: relative;
-      margin-top: -8vw;
-      margin-left: 24vw;
-        display: flex;
-        gap: 25.8vw;       /* 3 vw space between each button */
-      }
-          
-    .plus-btn {
-    display: inline-block;   /* allow padding & margin */
-    background: #CCED22;
-    margin-left: 0vw;
-    color: #000;             /* ensure link text is visible */
-    text-decoration: none;   /* remove underline */
-    border: none;
-        border-radius: 2vw;        /* slightly rounded corners */
-            width: 8vw;
-        height: 8vw;
-    font-size: 8vw;
-    font-weight: 600;
-    cursor: pointer;
-    text-align: center;
-  }
-  .plus-btn {
-    background: #CCED22;
-  }
-
-
 
 
 
@@ -513,38 +413,45 @@ margin-left: 1vw;
       margin-top: 10vw;
       margin-left: 2vw;
       padding: 1vw;
-      background: #000; /* пример фона */
+      background: #000; 
       color: #fff;
       font-family: "gilroy" , sans-serif;
       font-size:1.5vw;
     }
 
-    /* 👉 Style all links: remove underline and inherit color */
+   
     .nav-line2 a {
       text-decoration: none;
       color: inherit;
     }
 
-    /* 👉 2 vw gap after the first three links */
+   
     .nav-line2 .us2,
     .nav-line2 .merch2,
     .nav-line2 .poster2 {
       margin-right: 2vw;
     }
 
-    /* 👉 10 vw gap between cart and the icon */
+  
     .nav-line2 .buy2 {
       margin-right: 21vw;
     }
 
-    /* 👉 Size the location icon to exactly 1 vw × 1 vw */
     .nav-line2 .locationimage {
       width: 2vw;
       height: 2vw;
       object-fit: contain;
-      margin-right: 1vw; /* small gap before the footer text */
+      margin-right: 1vw; 
     }
 
+   
+    .nav-line2 .footer {
+      white-space: nowrap;
+    }
+
+    
+
+  
   .site-footer {
   position: relative;
   width: 200vw;
@@ -552,19 +459,19 @@ margin-left: 1vw;
   margin-top: 1vw;
 }
 
-/* the thin dividing line */
+
 .site-footer hr {
   border: none;
   height: 0.05vw;
-  background: #fff; /* white at 30% opacity */
+  background: #fff; 
   margin: 2.5vw;
 }
 
-/* centered copyright text */
+
 .site-footer .copyright {
   text-align: center;
   color: #fff;
-  font-size: 0.9vw;      /* scale with viewport width */
+  font-size: 0.9vw;      
   margin-top: 0.5vw;
-  font-family: Arial, sans-serif; /* or your Gilroy */
+  font-family: Arial, sans-serif; 
 }
