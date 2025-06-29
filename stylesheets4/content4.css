@@ -216,13 +216,12 @@ body{
 }
 
 
-    
-   .nav-line {
+       .nav-line {
      display: flex;
       align-items: center;
       position: relative;
       margin-top: -4vw;
-      margin-left:70vw;
+      margin-left:65vw;
       padding: 1vw;
       background: #000; /* пример фона */
       color: #fff;
@@ -292,14 +291,14 @@ margin-left: 1vw;
 .text3 {
       display: flex;
       position: relative;
-      margin-top: 7vw;
+      margin-top: 5vw;
       margin-left:3vw;
 
       gap: 0.5vw;               /* расстояние между фрагментами */
       color: #fdfdfd;           /* цвет по умолчанию */
       font-family: "gilroy", sans-serif;
       font-size: 2vw;
-      margin-bottom: 3VW;
+      margin-bottom: 1VW;
       white-space: nowrap;      /* чтобы всё шло в одну строку */
     }
 
@@ -362,7 +361,7 @@ margin-left: 1vw;
 .text4 {
       display: flex;
       position: relative;
-      margin-bottom: 3VW;
+      margin-bottom: 1VW;
       margin-top: 7vw;
       margin-left:3vw;
 
@@ -376,6 +375,8 @@ margin-left: 1vw;
     
 
 
+
+
    .nav-line2 {
      display: flex;
       align-items: center;
@@ -386,7 +387,7 @@ margin-left: 1vw;
       background: #000; /* пример фона */
       color: #fff;
       font-family: "gilroy" , sans-serif;
-      font-size:2vw;
+      font-size:1.5vw;
     }
 
     /* 👉 Style all links: remove underline and inherit color */
@@ -404,7 +405,7 @@ margin-left: 1vw;
 
     /* 👉 10 vw gap between cart and the icon */
     .nav-line2 .buy2 {
-      margin-right: 10vw;
+      margin-right: 21vw;
     }
 
     /* 👉 Size the location icon to exactly 1 vw × 1 vw */
@@ -412,13 +413,9 @@ margin-left: 1vw;
       width: 2vw;
       height: 2vw;
       object-fit: contain;
-      margin-right: 2vw; /* small gap before the footer text */
+      margin-right: 1vw; /* small gap before the footer text */
     }
-
-    /* 👉 Footer text never wraps */
-    .nav-line2 .footer {
-      white-space: nowrap;
-    }
+    
 
     
 

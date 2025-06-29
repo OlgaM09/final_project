@@ -218,6 +218,39 @@ body {
   /* removes any inline spacing/gap */
 }
 
+       .nav-line {
+     display: flex;
+      align-items: center;
+      position: relative;
+      margin-top: -4vw;
+      margin-left:65vw;
+      padding: 1vw;
+      background: #000; /* пример фона */
+      color: #fff;
+      font-family: "gilroy";
+      font-size:1.5vw;
+    }
+
+    /* 👉 Style all links: remove underline and inherit color */
+    .nav-line a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* 👉 2 vw gap after the first three links */
+    .nav-line .us,
+    .nav-line .merch,
+    .nav-line .poster {
+      margin-right: 2vw;
+    }
+
+    /* 👉 10 vw gap between cart and the icon */
+    .nav-line .buy {
+      margin-right:0vw;
+    }
+
+
+
 .header-line {
   display: flex;
   position: relative;
@@ -233,8 +266,6 @@ body {
   font-size: 1.5vw;
   /* при желании можно изменить размер */
 }
-
-
 
 
 .text1 {
@@ -276,7 +307,7 @@ body {
 
 .text2 {
   display: flex;
-  margin-top: 1vw;
+  margin-top: 2vw;
   margin-left: 35vw;
 
   gap: 0.5vw;
@@ -295,36 +326,37 @@ body {
   /* каждая «линия» на своей строке */
 }
 
-.btn1 {
-  display: inline-block;
-  background-color: #CCED22;
-  /* bright yellow fill */
-  color: #000;
-  margin-top: 5VW;
-  margin-bottom: 10vw;
-  margin-left: 39VW;
-  /* black text */
-  border: none;
-  paddinG: 0.8VW 5VW 0.8vw 5VW;
-  /* no border, solid fill */
-  border-radius: 10vw;
-  /* pill‐shaped corners */
+
+.text2 .line2-2 {
+margin-left: -3VW;}
+
+   .btn1 {
+display: inline-block;
+      background-color: #CCED22;    /* bright yellow fill */
+      color: #000; 
+      margin-top: 5VW;
+      margin-bottom: 10vw;
+      margin-left: 35VW;                  /* black text */
+      border: none;   
+      paddinG: 0.8VW  6VW 0.8vw 6VW;             /* no border, solid fill */
+      border-radius: 10vw;           /* pill‐shaped corners */
   font-family: "gilroy", sans-serif;
-  font-size: 1.5VW;
-  text-decoration: none;
-  text-align: center;
-  cursor: pointer;
-  z-index: 10;
+      font-size: 1.5VW;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      z-index: 10;
 
-}
+        }
+    .btn1:hover {
+      background-color: #CCED22 ;
+    }
 
-.btn1:hover {
-  background-color: #CCED22;
-}
 
 
 .gallery {
   display: flex;
+  margin-top: -2vw;
   width: 50vw;
   height: 50vw;
   gap: 1vw;
@@ -383,74 +415,84 @@ body {
 /* Container for the two images */
 .extra-row {
   display: flex;
-  position: relative;
-  gap: 1vw;
-  margin-top: 5vw;
-  /* space between the images */
-  width: 100vw;
-  height: 50vw;
+  gap: 2vw;
 }
 
-/* Each image takes up half the width */
-.extra-row img {
-  flex: 1;
-  width: 0;
-  /* let flex define the width */
-  height: 50vw;
-  /* stretch to fill container height */
-  object-fit: cover;
-  /* cover the cell, cropping as needed */
-  display: block;
-  /* eliminate inline whitespace */
-}
-
-
-
-.nav-line {
+/* common rules */
+.extra-row {
   display: flex;
-  align-items: center;
+  gap: 1.2vw;
   position: relative;
-  margin-top: 20vw;
-  margin-left: 2vw;
-  padding: 1vw;
-  background: #000;
-  /* пример фона */
-  color: #fff;
-  font-family: "gilroy", sans-serif;
-  font-size: 2vw;
+  margin-top: 3VW;
+}
+.extra-img {
+  object-fit: cover;
+  display: block;
 }
 
-/* 👉 Style all links: remove underline and inherit color */
-.nav-line a {
-  text-decoration: none;
-  color: inherit;
+/* per-image overrides: */
+.extra-cafe {
+  /* 1) give the container a yellow background and a set size */
+  background-color: yellow;
+  width: 63vw;
+  height: 40vw;
+  overflow: hidden;     /* hide any part of the img that sticks out */
+  position: relative;   /* for good measure */
 }
 
-/* 👉 2 vw gap after the first three links */
-.nav-line .us,
-.nav-line .merch,
-.nav-line .poster {
-  margin-right: 2vw;
+.extra-merch {
+  background-color: red;
+  width: 54vw;
+  overflow: hidden;     /* hide any part of the img that sticks out */
+  position: relative;   /* for good measure */
+  height: 40vw;
 }
 
-/* 👉 10 vw gap between cart and the icon */
-.nav-line .buy {
-  margin-right: 10vw;
-}
 
-/* 👉 Size the location icon to exactly 1 vw × 1 vw */
-.nav-line .locationimage {
-  width: 2vw;
-  height: 2vw;
-  object-fit: contain;
-  margin-right: 2vw;
-  /* small gap before the footer text */
-}
 
-/* 👉 Footer text never wraps */
-.nav-line .footer {
-  white-space: nowrap;
-}
+   .nav-line2 {
+     display: flex;
+      align-items: center;
+      position: relative;
+      margin-top: 7vw;
+      margin-left: 2vw;
+      padding: 1vw;
+      background: #000; /* пример фона */
+      color: #fff;
+      font-family: "gilroy" , sans-serif;
+      font-size:1.5vw;
+    }
+
+    /* 👉 Style all links: remove underline and inherit color */
+    .nav-line2 a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* 👉 2 vw gap after the first three links */
+    .nav-line2 .us2,
+    .nav-line2 .merch2,
+    .nav-line2 .poster2 {
+      margin-right: 2vw;
+    }
+
+    /* 👉 10 vw gap between cart and the icon */
+    .nav-line2 .buy2 {
+      margin-right: 21vw;
+    }
+
+    /* 👉 Size the location icon to exactly 1 vw × 1 vw */
+    .nav-line2 .locationimage {
+      width: 2vw;
+      height: 2vw;
+      object-fit: contain;
+      margin-right: 1vw; /* small gap before the footer text */
+    }
+
+    /* 👉 Footer text never wraps */
+    .nav-line2 .footer {
+      white-space: nowrap;
+    }
 
 
 

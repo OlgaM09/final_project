@@ -256,7 +256,7 @@ margin-left:10vw;
 
      .text2 {
       display: flex;
-      margin-top: 1vw;
+      margin-top: 2vw;
       margin-left:35vw;
 
       gap: 0.5vw;               /* расстояние между фрагментами */
@@ -276,11 +276,11 @@ display: inline-block;
       color: #000; 
       margin-top: 5VW;
       margin-bottom: 10vw;
-      margin-left: 39VW;                  /* black text */
+      margin-left: 38VW;                  /* black text */
       border: none;   
-      paddinG: 0.8VW  5VW 0.8vw 5VW;             /* no border, solid fill */
+      paddinG: 0.8VW  6VW 0.8vw 6VW;             /* no border, solid fill */
       border-radius: 10vw;           /* pill‐shaped corners */
-      font-family: "gilroy", sans-serif;
+  font-family: "gilroy", sans-serif;
       font-size: 1.5VW;
       text-decoration: none;
       text-align: center;
@@ -308,6 +308,7 @@ display: inline-block;
   justify-content: center;   /* center vertically */
   align-items: center;       /* center horizontally */
   padding: 2vw;
+  
   box-sizing: border-box;
   
   text-align: center;
@@ -319,6 +320,8 @@ display: inline-block;
 }
 
 .square:nth-child(1) { background: #ECECEC; }
+.square:nth-child(1) { margin-top: vw; }
+
 .square:nth-child(2) { background: #0F19C6; color: #FFF; }
 .square:nth-child(3) { background: #C038F4; color: #FFF; }
 .square:nth-child(4) { background: #ECECEC; }
@@ -491,7 +494,7 @@ display: inline-block;
       background: #000; /* пример фона */
       color: #fff;
       font-family: "gilroy" , sans-serif;
-      font-size:2vw;
+      font-size:1.5vw;
     }
 
     /* 👉 Style all links: remove underline and inherit color */
@@ -509,7 +512,7 @@ display: inline-block;
 
     /* 👉 10 vw gap between cart and the icon */
     .nav-line .buy {
-      margin-right: 10vw;
+      margin-right: 21vw;
     }
 
     /* 👉 Size the location icon to exactly 1 vw × 1 vw */
@@ -517,7 +520,7 @@ display: inline-block;
       width: 2vw;
       height: 2vw;
       object-fit: contain;
-      margin-right: 2vw; /* small gap before the footer text */
+      margin-right: 1vw; /* small gap before the footer text */
     }
 
     /* 👉 Footer text never wraps */

@@ -222,7 +222,7 @@ body{
       align-items: center;
       position: relative;
       margin-top: -4vw;
-      margin-left:70vw;
+      margin-left:65vw;
       padding: 1vw;
       background: #000; /* пример фона */
       color: #fff;
@@ -376,7 +376,7 @@ margin-left: 1vw;
 .img-mid {
   display: flex;
   justify-content: center;   /* center the image horizontally if needed */
-  margin-top: 2vw;
+  margin-top: 0vw;
 }
 
 
@@ -417,7 +417,8 @@ margin-left: 1vw;
       color: #fdfdfd;
       font-family: "gilroy", sans-serif;
       font-size: 2vw;
-      margin-top: 6VW;         /* give it a little breathing room from the top */
+      margin-top: 4VW;   
+            /* give it a little breathing room from the top */
       padding-left: 1vw;
   }
           /* First word → 20vw to next */
@@ -440,7 +441,7 @@ margin-left: 1vw;
       color: #fdfdfd;
       font-family: "gilroy", sans-serif;
       font-size: 2vw;
-      margin-top: 34VW;         /* give it a little breathing room from the top */
+      margin-top: 32VW;         /* give it a little breathing room from the top */
       padding-left: 1vw;
   }
           /* First word → 20vw to next */
@@ -461,7 +462,7 @@ margin-left: 1vw;
     .img-row2 {
       display: flex;
       position: relative;
-      margin-top: 5vw;       /* push the images down a bit */
+      margin-top: 3vw;       /* push the images down a bit */
       gap: 2vw;              /* 2vw between each image */
       z-index: 0;            /* behind the text */
     }
@@ -505,7 +506,6 @@ margin-left: 1vw;
 
 
 
-
    .nav-line2 {
      display: flex;
       align-items: center;
@@ -516,7 +516,7 @@ margin-left: 1vw;
       background: #000; /* пример фона */
       color: #fff;
       font-family: "gilroy" , sans-serif;
-      font-size:2vw;
+      font-size:1.5vw;
     }
 
     /* 👉 Style all links: remove underline and inherit color */
@@ -534,7 +534,7 @@ margin-left: 1vw;
 
     /* 👉 10 vw gap between cart and the icon */
     .nav-line2 .buy2 {
-      margin-right: 10vw;
+      margin-right: 21vw;
     }
 
     /* 👉 Size the location icon to exactly 1 vw × 1 vw */
@@ -542,15 +542,8 @@ margin-left: 1vw;
       width: 2vw;
       height: 2vw;
       object-fit: contain;
-      margin-right: 2vw; /* small gap before the footer text */
+      margin-right: 1vw; /* small gap before the footer text */
     }
-
-    /* 👉 Footer text never wraps */
-    .nav-line2 .footer {
-      white-space: nowrap;
-    }
-
-    
 
   .site-footer {
   position: relative;

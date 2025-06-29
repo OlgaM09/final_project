@@ -250,7 +250,7 @@ body{
   position: relative;   /* allow padding & margin */
   margin-top: 2vw;
         margin-left: 60vw;
-
+      font-family: "gilroy", sans-serif;
   padding: 1vw 3vw;
   background: #CCED22;
   color: #000;             /* ensure link text is visible */
